@@ -4,6 +4,7 @@ const Discord = require('discord.js');
 client.on('ready', () => {
   console.log("Logged in!")
 });
+
 client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
@@ -53,4 +54,4 @@ client.on("message", message => {
                             
                           }
 });
-client.login('BOT_TOKEN');
+client.login(BOT_TOKEN);
