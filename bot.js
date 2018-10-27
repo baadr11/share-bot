@@ -2945,7 +2945,7 @@ client.on('message', message => {
 
 client.on("message", (message) => {
     /// ALPHA CODES
-   if (message.content.startsWith("=ticket")) {     /// ALPHA CODES
+   if (message.content.startsWith("$ticket")) {     /// ALPHA CODES
         const reason = message.content.split(" ").slice(1).join(" ");     /// ALPHA CODES
         if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
         if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
@@ -3000,7 +3000,7 @@ client.on("message", (message) => {
 });
 
 client.on('guildMemberAdd', member => {
-let channel = member.guild.channels.find(c => c.name === 'welcomee');
+let channel = member.guild.channels.find(c => c.name === 'welcome');
 let memberavatar = member.user.avatarURL
   if (!channel) return; 
 let embed = new Discord.RichEmbed()
@@ -3074,7 +3074,7 @@ member.addRole(member.guild.roles.find('name', 'Member'));
 
 client.on("ready", () => {
   function baadr() {
-    client.guilds.get('424606436706877440').roles.find("name", "Random").setColor("RANDOM");
+    client.guilds.get('424606436706877440,496529684679360515').roles.find("name", "Random").setColor("RANDOM");
   }
   setInterval(baadr, 1000);
 })
