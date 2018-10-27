@@ -3074,7 +3074,14 @@ member.addRole(member.guild.roles.find('name', 'Member'));
 
 client.on("ready", () => {
   function baadr() {
-    client.guilds.get('424606436706877440,496529684679360515').roles.find("name", "Random").setColor("RANDOM");
+    client.guilds.get('424606436706877440').roles.find("name", "Random").setColor("RANDOM");
+  }
+  setInterval(baadr, 1000);
+})
+
+client.on("ready", () => {
+  function baadr() {
+    client.guilds.get('496529684679360515').roles.find("name", "Random").setColor("RANDOM");
   }
   setInterval(baadr, 1000);
 })
