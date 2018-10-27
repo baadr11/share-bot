@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
  const prefix = "$";
+ const object = {};
 client.on('ready', () => { 
     console.log('I am ready!');
 });
@@ -3026,7 +3027,7 @@ let embed = new Discord.RichEmbed()
             .setThumbnail(member.user.avatarURL)
             .setTitle(`الله معاك ✋:skin-tone-1: 😔`)
             .setDescription(`مع السلامه تشرفنا بك ✋:skin-tone-1: 😔 `)
-            .addField('👤   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
+            .addField('👤   تـبقى .',`**[ ${member.guild.memberCount} شخص ]**`,true)
             .setColor('RED')
             .setFooter(`==== نتمنـى لكم الإستمتاع .. ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
         
@@ -3035,7 +3036,7 @@ let embed = new Discord.RichEmbed()
         channel.send({embed : embed});
         })
 
-const lol = JSON.parse(fs.readFileSync("lol.json", "utf8"))
+const lol = object
 function hi (message, args){
     var embed = new Discord.RichEmbed()
     .setAuthor(client.user.username , client.user.avatarURL)
@@ -3082,7 +3083,8 @@ client.on('message', message => {
    if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-if(!message.member.hasPermission('ADMINISTRATOR')) return
+if(!message.member.hasPermission('ADMINI
+STRATOR')) return
 message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 const args = message.content.split(" ").slice(1).join(" ")
 const BcList = new Discord.RichEmbed()
