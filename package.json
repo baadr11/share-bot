@@ -6,7 +6,7 @@
   "repository": "",
   "author": "Mostafa Eweda <mo.eweda@gmail.com>",
   "start": "node bot.js"
-  "dependencies": {
+  "dependencies"; {
     "ascii-data-table": "^2.1.1",
     "async": "~0.2.8",
     "canvas": "^1.6.11",
