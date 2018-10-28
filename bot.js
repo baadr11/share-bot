@@ -3,6 +3,8 @@ const A7MD = new Discord.Client();
 
 console.log("BOT ONLINE");
 
+A7MD.login(process.env.BOT_TOKEN);
+
 A7MD.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(` 
@@ -15,7 +17,6 @@ A7MD.on("guildMemberAdd", member => {
 **`) 
 }).catch(console.error)
 })
+
+
 });
-
-
-A7MD.login(process.env.BOT_TOKEN);
