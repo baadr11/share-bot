@@ -1,21 +1,29 @@
 const Discord = require('discord.js');
-      client = new Discord.Client();
+const A7MD = new Discord.Client();
 
-client.on('ready', () => {
-  console.log("Logged in!")
-});
-var prefix = "$";
+console.log("BOT ONLINE");
+ 
 
-client.on('message', message => {
-    if(!message.channel.guild) return;
-let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('5bc')){
-if(!message.author.id === '342288364361482253') return;
-message.channel.sendMessage('#DONE')
-client.users.forEach(m =>{
-m.sendMessage(args)
+client.on("ready", async () => {
+    if(client.guilds.size > 1) {
+        client.user.setActivity(`Konex.`);
+        console.log(`${client.user.username} is online on ${client.guilds.size} servers!`)
+    } else {
+        client.user.setActivity(`Konex.`);
+        console.log(`${client.user.username} is online on ${client.guilds.size} server!`)
+    }
+    client.user.setStatus("Idle");
+
+A7MD.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(` 
+**
+سسـلام عليكم ورحمة الله. 
+
+- توآجدك فسيرفرنا, يزيدنا بهجه وسعادة ياعيني. 
+                               [ https://discord.gg/HacxHGc] 
+تـنورنا :yellow_heart: ... [ ${member}  ]
+**`) 
+}).catch(console.error)
 })
-}
-});
-
-client.login(process.env.BOT_TOKEN);
+A7MD.login(process.env.BOT_TOKEN);
