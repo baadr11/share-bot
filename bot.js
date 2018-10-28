@@ -16,7 +16,4 @@ A7MD.on("guildMemberAdd", member => {
 تـنورنا :yellow_heart: ... [ ${member}  ]
 **`) 
 }).catch(console.error)
-})
-
-
 });
