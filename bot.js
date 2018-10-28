@@ -25,5 +25,7 @@ A7MD.on("guildMemberAdd", member => {
 تـنورنا :yellow_heart: ... [ ${member}  ]
 **`) 
 }).catch(console.error)
-})
+});
+
+
 A7MD.login(process.env.BOT_TOKEN);
