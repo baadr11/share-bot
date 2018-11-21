@@ -98,10 +98,11 @@ if(ra3d.content.startsWith('#cc')) {
               }
             }
   })
-})
+});
 
 
-       });
+
+       
                       
 			  
 client.login('NDkwNTM0OTkwODYyNDgzNDc2.DquxCg.rcy2-YGj42tvuOwJSNh2K9HpRL4');
