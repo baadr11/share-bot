@@ -70,7 +70,37 @@ client.on('message', msg => {
 	}
     
   })
+client.on('message', message => {
+            if(!message.channel.guild) return;
+let args = message.content.split(' ').slice(1).join(' ');
+if (message.content.startsWith('$bcall')){
+ if (message.author.id !== '342288364361482253') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
+ if(!message.author.id === '342288364361482253') return;
+message.channel.sendMessage('جار ارسال الرسالة |✅')
+client.users.forEach(m =>{
+m.sendMessage(args)
+})
+}
 
+  client.on('message', ra3d => {
+var prefix = "#";
+                        let args = ra3d.content.split(" ").slice(1).join(" ")
+if(ra3d.content.startsWith('#cc')) {
+    if(!args) return ra3d.channel.send('`يرجي اختيار كم لون `');
+             if (!ra3d.member.hasPermission('MANAGE_ROLES')) return ra3d.channel.sendMessage('`**⚠ | `[MANAGE_ROLES]` لا يوجد لديك صلاحية**'); 
+              ra3d.channel.send(`**✅ |Created __${args}__ Colors**`);
+                  setInterval(function(){})
+                    let count = 0;
+                    let ecount = 0;
+          for(let x = 1; x < `${parseInt(args)+1}`; x++){
+            ra3d.guild.createRole({name:x,
+              color: 'RANDOM'})
+              }
+            }
+
+  
+
+       });
                       
 			  
-client.login('NTAzMTI3NTEyNDM2NDQxMDk5.Dqx-kg.f4due43pUDlpTrSLYX5S4fceqoQ');
+client.login('NDkwNTM0OTkwODYyNDgzNDc2.DquxCg.rcy2-YGj42tvuOwJSNh2K9HpRL4');
