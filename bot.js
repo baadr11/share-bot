@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+var prefix = "#";
 
 client.on('ready', () => {
   console.log(`|===================================|`);
@@ -83,7 +84,6 @@ m.sendMessage(args)
 }
 
   client.on('message', ra3d => {
-var prefix = "#";
                         let args = ra3d.content.split(" ").slice(1).join(" ")
 if(ra3d.content.startsWith('#cc')) {
     if(!args) return ra3d.channel.send('`يرجي اختيار كم لون `');
